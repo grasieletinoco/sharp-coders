@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>11 - Atividade Loop</title>
+
+  <script>
+    // Contabilizar Pares e Ímpares
+    let par = 0;
+    let impar = 0;
+
+    // Valida
+    let valida = false;
+
+    do{
+        // Informe um Número
+        let numero = parseInt(prompt("Informe um Número"));
+
+        // Laço
+        if(numero < 0){
+            alert('Favor Informar um Número Maior ou Igual a Zero.');
+        }else{
+            // Alterar o Valor da Variável Valida
+            valida = true;
+
+            for(let i=0; i<=numero; i++){
+                // Condicional
+                if(i % 2 == 0){
+                    par++;
+                }else{
+                    impar++;
+                }
+            }
+
+            // Retornar Contadores
+            document.write(`Pares: ${par}`);
+            document.write(`<hr>Ímpares: ${impar}`);
+        }
+
+    }while(valida == false);
+
+</script>
+
+
+</head>
+<body>
+  
+</body>
+</html>

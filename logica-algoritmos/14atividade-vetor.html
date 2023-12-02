@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>14 - Atividade Vetor</title>
+
+  <script>
+
+    // Vetor (Array)
+    let produtos = [];
+
+    // Menu
+    let menu = "1º Cadastrar Produto\n";
+        menu+= "2º Listar Produto\n";
+        menu+= "3º Remover Produto\n";
+        menu+= "4º Finalizar\n";
+
+    // Opção
+    let opcao = 0;
+
+    // Laço de Repetição
+    do {
+      // Obter a Opção
+      opcao = parseInt(prompt(menu));
+      // Ações
+      switch (opcao) {
+
+        case 1:
+          produtos.push(prompt("informe o Produto que Deseja Cadastrar"));
+          alert("Produto Cadastrado Com Sucesso!");
+          break;
+
+        case 2:
+          let lista = "***** PRODUTOS CADASTRADOS *****\n";
+          for (let indice = 0; indice < produtos.length;indice++) {
+            lista+= produtos[indice] + "\n";
+          }
+          alert(lista);
+          break;
+
+        case 3:
+          let indiceRemocao = -1;
+          let nomeProdutoRemocao = prompt("Informe o Nome do Produto que Deseja Remover");
+          for (let indice = 0; indice < produtos.length;indice++) {
+            if(nomeProdutoRemocao == produtos[indice]){
+              indiceRemocao = indice;
+            }
+          }
+          if (indiceRemocao != -1) {
+            produtos.splice(indiceRemocao,1)
+            alert("Produto Removido Com Sucesso!")
+          } else {
+            alert("O Produto Informado Não foi Encontrado");
+          }
+          break;
+
+        case 4:
+          alert("Sistema Finalizado!");
+          break;
+
+        default:
+          alert("Opção Inválida!");
+      }
+
+    } while (opcao != 4);
+    
+  </script>
+  
+</head>
+<body>
+
+</body>
+</html>

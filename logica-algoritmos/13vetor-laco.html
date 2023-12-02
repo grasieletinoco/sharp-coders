@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>13 - Vetor Laço</title>
+
+  <script>
+    // Vetor (Array)
+    let nomes = ['Aline', 'Bruno', 'Carlos', 'Diana', 'Elaine'];
+
+    // Obter nome
+    let obterNome = prompt("Informe um Nome");
+
+    // Variável para verificar se existe o nome
+    let existe = false;
+
+    // Verificar se o nome existe
+    for (let indice = 0; indice < nomes.length; indice++) {
+      if(obterNome.toLocaleLowerCase() == nomes[indice].toLocaleLowerCase()){
+        existe = true;
+      }
+    }
+
+    // Condicional para retornarmos a situação
+    if(existe){
+      alert("O nome Existe no Vetor!")
+    }else{
+      alert("O nome Não Existe no Vetor!")
+    }
+
+    // Laço Repetição
+    // for (let indice = 0; indice < nomes.length; indice++) {
+    //   document.write(nomes[indice]+"<br>");
+    // }
+
+  </script>
+
+</head>
+<body>
+
+</body>
+</html>

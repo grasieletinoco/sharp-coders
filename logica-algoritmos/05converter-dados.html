@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>05 - Converter Dados</title>
+
+  <script>
+    // Conversão de Dados
+    // 1° Texto para Número Inteiro = parseInt()
+    // 2º Texto para Número Real = parseFloat()
+    // 3º Número para Texto = toString()
+
+    // Obter Notas
+    let nota1 = parseFloat(prompt("Informe a primeira nota")) ;
+    let nota2 = parseFloat(prompt("Informe a segunda nota")) ;
+
+    // Realizar Cálculo de Média
+    //document.write(nota1+nota2) / 2;
+    let media = (nota1+nota2) / 2;
+
+    // Condicional
+    // if (media >= 7) {
+    //   document.write("Aprovado(a)");
+    // } else {
+    //   document.write("Reprovado(a)");
+    // }
+
+    // Operador Ternário
+    //document.write(media >= 7 ? "Aprovado(a)" : "Reprovado(a)");
+    document.write(media >= 7 ? `Aprovado(a) com ${media.toFixed(2)}` : `Reprovado(a) com ${media.toFixed(2)}`);
+  </script>
+
+</head>
+<body>
+
+</body>
+</html>

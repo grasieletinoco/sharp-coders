@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>04 - Operadores Lógicos</title>
+
+  <script>
+    /*
+    E   -> &&
+    OU  -> ||
+    NÃO -> !
+    */
+
+    // Dados
+    let valor = prompt("Informe o valor da compra");
+    let tipoPagamento = confirm("Pagamento à Vísta?")
+
+    //document.write(valor +" "+ tipoPagamento);
+
+    // Condicional
+    if(valor >= 200 && tipoPagamento == true){
+      document.write(`Total a pagar R$ ${valor*0.9}`);
+    }else{
+      document.write(`Total a pagar R$ ${valor}`);
+    }
+  </script>
+
+</head>
+<body>
+  
+</body>
+</html>

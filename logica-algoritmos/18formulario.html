@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>18 - Formulário</title>
+
+  <script>
+
+    // Função para Enviar Dados
+    function enviar(formulario) {
+      // Capturando Valores dos Inputs
+      let nome = formulario[0].value;
+      let idade = parseInt(formulario[1].value);
+      //Mensagem
+      if (nome == "") {
+        alert("Informe um Nome")
+        formulario[0].focus();       
+      } else if(isNaN(idade)) {
+        alert("Informe uma Idade")
+        formulario[1].focus();
+      }else{
+        alert(`Boa Noite ${nome}! Você tem ${idade} anos.`);
+      }
+    }
+
+
+  </script>
+
+</head>
+<body>
+
+  <form action="#" onsubmit="enviar(this)">
+    <div><input type="text" name="" placeholder="Informe seu Nome"></div>
+    <div><input type="number" name="" placeholder="Informe sua Idade"></div>
+    <div><input type="submit" value="Enviar"></div>
+  </form>
+
+  
+  
+</body>
+</html>
