@@ -17,7 +17,7 @@
 - Angular
 - C#
 
-#### :woman_technologist: Metodologia:
+#### 👩‍💻 Metodologia:
 
 - Aulas Síncronas
 - Conteúdo Assíncrono
