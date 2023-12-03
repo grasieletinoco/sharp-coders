@@ -13,7 +13,9 @@
 - Controle de Versão com Git e GitHub
 - HTML5
 - CSS3
+- Bootstrap
 - JavaScript
+- TypeScript
 - Angular
 - C#
 
