@@ -1,1 +1,23 @@
-<p>componente3 works!</p>
+<!--Condicional-->
+@if (media >=7){
+  <p>Aprovado(a)</p>
+}@else if (media >=5){
+  <p>Em Exame</p>
+}@else {
+  <p>Reprovado(a)</p>
+}
+
+<!-- Escolha  -->
+@switch (linguagem) {
+  @case ('HTML') {<P>Linguagem de Marcação.</P>}
+  @case ('CSS') {<P>Linguagem de Estilo.</P>}
+  @case ('JavaScript') {<P>Linguagem de Programação.</P>}
+  @default {<p>Linguagem Não Encontrada.</p>}
+}
+
+<!-- Laço de Repetição  -->
+@for (nome of nomes; track $index) {
+  <p>{{$index}} - {{nome}}</p>
+}@empty {
+  <p>O Vetor de Nomes Está Vazio.</p>
+}
