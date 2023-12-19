@@ -1,0 +1,8 @@
+<p>{{formulario.value | json}}</p>
+
+<form [formGroup]="formulario"(submit)="cadastrar()">
+  <input type="text" placeholder="Nome" formControlName="nome" class="form-control">
+  <input type="number" placeholder="1ª Nota" formControlName="nota1" class="form-control">
+  <input type="number" placeholder="2ª Nota" formControlName="nota2" class="form-control">
+  <input type="submit" value="Cadastrar" class="btn btn-primary">
+</form>
