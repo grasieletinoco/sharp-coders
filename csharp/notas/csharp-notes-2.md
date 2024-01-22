@@ -145,7 +145,7 @@ Código Ruim = Dificil de extender, entender e mudar
 ### switch-case
 
 ```cs
-string sinal = "vermelho";
+string sinal = "Vermelho";
 
 switch(sinal) {
   case "vermelho":
@@ -195,5 +195,91 @@ Console.WriteLine(y); // 11
 ## Fibonacci
 
 cada próximo termo é a soma dos 2 anteriores a ele
+
 valores = 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89
+
 indices = 0, 1, 2, 3, 4, 5, 6,  7,  8,  9, 10, 11
+
+## Keywords ref, in, out
+
+As 3 criam refencias de memoria.
+
+### ref - referencia
+
+sintaxe:
+
+```cs
+public static void Troca(ref int a, ref int b) {
+  int aux = a;
+  a = b;
+  b = aux;
+}
+
+int a = 3, b = 2;
+Console.WriteLine($"A: {a}, B: {b}"); // A: 3, B: 2
+
+Troca(ref a, ref b);
+
+Console.WriteLine($"A: {a}, B: {b}"); // A: 2, B: 3
+```
+
+### in - entrada/dentro
+
+```cs
+public static void Imprime(in double valor) {
+  // Consegue Garantir Imutabilidade da Variavel
+  // valor = 200.0; // Não Funciona
+  Console.WriteLine($"Valor: R${valor:F2}");
+}
+
+double valor = 239.99;
+Imprime(in valor);
+```
+
+### out - saida/sair
+
+```cs
+public static void Inicializa(out int pontuacao) {
+  pontuacao = 100;
+}
+
+// int pontuacao;
+Inicializa(out pontuacao);
+```
+
+## Nullables
+
+triste:
+
+```cs
+Nullable<int> nota = null;
+```
+
+feliz:
+
+```cs
+int? nota = null;
+nota = 3.0;
+```
+
+sei o que estou fazendo (garantia de nao nulo):
+
+```cs
+// ! -> Indica que o Valor Não Será Nulo
+string texto = Console.ReadLine()!;
+```
+
+### Nullish Coalescence Operator
+
+Testa se o Valor é Nulo, se for usa um Valor Secundário.
+
+```cs
+double? salarioTrabalhoVoluntario = null;
+double? salarioSemTrabalho = 0.0;
+
+// Trabalho Voluntário = Recebe 0 Reais
+Console.WriteLine(salarioTrabalhoVoluntario ?? "Nao recebe");
+
+// Salário sem Trabalho = Recebe 0 Reais
+Console.WriteLine(salarioSemTrabalho ?? "Nao recebe");
+```
