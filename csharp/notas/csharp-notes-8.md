@@ -119,3 +119,30 @@ public class Professor : Pessoa { // Professor Extende Pessoa
   public List<string> Habilidades {get; set;} = new();
 }
 ```
+
+## Keywords (palavras-chave) de Heranca
+
+### Base
+
+A palavra `base` Funciona de Modo Similar a Palavra `this`, so que ela faz referencia a Classe Mãe do Método ou Atributo sendo Utilizado.
+
+### `virtual`
+
+Permite que um Método seja Sobreescrito por uma Classe Filha
+
+### `override` - sobreescrever
+
+Se eu Quero Mudar o Comportamento de um Método da Classe Mãe.
+
+Exemplo: Sobreescrevendo o Comportamento Padrão da Classe `Object`
+
+```cs
+public override string ToString()
+{
+    return $"...";
+}
+```
+
+### Protected
+
+Permite que Classes Filhas e a Classe Mãe vejam um Atributo.
